@@ -13,7 +13,7 @@
                 <p>Id: <%= gas_station.id_station%></p>
                 <p><%= link_to 'Detalles' , gas_station, class: 'btn btn-primary'%>
                 <%= link_to 'Editar', edit_gas_station_path(gas_station), class: 'btn btn-warning'%>
-                <%= link_to 'Eliminar', gas_station, method: :delete, data:  {confirm: 'Are you sure?'}, class: 'btn btn-warning'%>
+                <%= link_to 'Eliminar', gas_station, method: :delete, data:  {confirm: 'Are you sure?'}, class: 'btn btn-danger'%>
 
                 </p>
               </div>
@@ -23,4 +23,4 @@
 </div>
 <br>
 
-<%= link_to 'New Gas Station', new_gas_station_path %>
+<%= link_to 'New Gas Station', new_gas_station_path, class: 'btn btn-primary' %>
