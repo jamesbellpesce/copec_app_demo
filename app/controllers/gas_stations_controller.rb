@@ -25,7 +25,7 @@ before_action :authenticate_user!, except: [:index]
   # POST /gas_stations.json
   def create
     @gas_station = GasStation.new(gas_station_params)
-    @gas_station.user = current_user  
+    @gas_station.user = current_user
     respond_to do |format|
       if @gas_station.save
         format.html { redirect_to @gas_station, notice: 'Gas station was successfully created.' }
@@ -69,6 +69,6 @@ before_action :authenticate_user!, except: [:index]
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def gas_station_params
-      params.require(:gas_station).permit(:address, :image, :name, :id_station)
+      params.require(:gas_station).permit(:address, :image, :name, :id_station, :avatar)
     end
 end
